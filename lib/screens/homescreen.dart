@@ -12,120 +12,98 @@ class HomepageScreen extends StatelessWidget {
             children: [
               TopBar(
                 title: 'Thashib Tk',
-                subtitle: 'Flutter Developer(Noobie)',
+                subtitle: 'Developer(Noobie)',
                 color: Colors.blue.shade300,
               ),
-              const SizedBox(height: 30),
-              Text(
-                '  About me...',
-                style: TextStyle(fontSize: 30, color: Color(0xff0B3D2E)),
-              ),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: Text(
-                  'Im 1st year Btech Student at KMCT College of Engineering. I\'m interested to learn new languages. I\'m just a beginner to programming. Now i\'m learning Flutter',
-                  style: TextStyle(fontSize: 20, color: Colors.black),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'About Me',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.blue.shade700,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      'Im 1st year Btech Student at KMCT College of Engineering. I\'m interested to learn new languages. I\'m just a beginner to programming. Now i\'m learning Flutter',
+                      style: TextStyle(
+                        fontSize: 16,
+                        height: 1.5,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Contact Me'),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.blue.shade300,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
-              Center(
-                  child: ElevatedButton(
-                onPressed: () {},
-                child: Text('Contact Me'),
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.blue.shade300,
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                    textStyle:
-                        TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-              )),
-              const SizedBox(
-                height: 20,
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 20.0),
+                height: 120.0,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Card(
+                      color: Colors.blue.shade300,
+                      child: Container(
+                        width: 160.0,
+                        child: Align(
+                          child: Text(
+                            'Social Media',
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      color: Colors.blue.shade300,
+                      child: Container(
+                        width: 160.0,
+                        child: Align(
+                          child: Text(
+                            'Hobbies',
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      color: Colors.blue.shade300,
+                      child: Container(
+                        width: 160.0,
+                        child: Align(
+                            child: Text(
+                          'Experience',
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.white,
+                          ),
+                        )),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      color: Colors.blue.shade300,
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          const Center(
-                            child: Align(
-                              alignment: Alignment.topCenter,
-                              child: Text(
-                                '\nSocial\nMedia',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      color: Colors.blue.shade300,
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          const Center(
-                            child: Align(
-                              alignment: Alignment.topCenter,
-                              child: Text(
-                                '\nHobbies',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      color: Colors.blue.shade300,
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          const Center(
-                            child: Align(
-                              alignment: Alignment.topCenter,
-                              child: Text(
-                                '\nExperiance',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
         ),
