@@ -37,7 +37,11 @@ class HomepageScreen extends StatelessWidget {
                     textStyle:
                         TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               )),
-              Column(
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     width: 100,
@@ -57,6 +61,60 @@ class HomepageScreen extends StatelessWidget {
                                 '\nSocial\nMedia',
                                 style: TextStyle(
                                   fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      color: Colors.blue.shade300,
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          const Center(
+                            child: Align(
+                              alignment: Alignment.topCenter,
+                              child: Text(
+                                '\nHobbies',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      color: Colors.blue.shade300,
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          const Center(
+                            child: Align(
+                              alignment: Alignment.topCenter,
+                              child: Text(
+                                '\nExperiance',
+                                style: TextStyle(
+                                  fontSize: 18,
                                   color: Colors.white,
                                 ),
                               ),
